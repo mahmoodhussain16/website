@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+
+    <!-- Navbar -->
+    <nav class="bg-blue-600 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#" class="text-2xl font-bold">Mahmood hussain</a>
+                </div>
+                <div class="hidden md:flex space-x-4 items-center">
+                    <a href="index.html" class="hover:bg-blue-700 px-3 py-2 rounded-md">Home</a>
+                    <a href="dashboard.html" class="hover:bg-blue-700 px-3 py-2 rounded-md">Dashboard</a>
+
+                    <a href="contact.html" class="hover:bg-blue-700 px-3 py-2 rounded-md">About</a>
+                    <a href="login.html" class="hover:bg-blue-700 px-3 py-2 rounded-md">Login</a>
+                    <a href="signup.html" class="hover:bg-blue-700 px-3 py-2 rounded-md">Signup</a>
+                </div>
+                <div class="flex items-center md:hidden">
+                    <button id="menu-btn" class="text-white focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden">
+            <a href="index.html" class="block px-4 py-2 text-white hover:bg-blue-700">Home</a>
+            <a href="contact.html" class="block px-4 py-2 text-white hover:bg-blue-700">Contact</a>
+            <a href="login.html" class="block px-4 py-2 text-white hover:bg-blue-700">Login</a>
+            <a href="signup.html" class="block px-4 py-2 text-white hover:bg-blue-700">Signup</a>
+            <a href="dashboard.html" class="block px-4 py-2 text-white hover:bg-blue-700">Dashboard</a>
+        </div>
+    </nav>
+
+
+    <!-- JavaScript for Mobile Menu Toggle -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+</html>
